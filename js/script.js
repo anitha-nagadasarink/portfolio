@@ -51,3 +51,21 @@ themeSwitch.addEventListener("click", function (e) {
     header.classList.remove("bg-gray-900");
   }
 });
+
+// Scroll Update
+window.addEventListener("scroll", function(){
+  let  scrollRevealEle = document.querySelectorAll(".scroll-reveal");
+  
+  for(let i=0; i<scrollRevealEle.length;i++){
+    let windowHeight = window.innerHeight;
+    let revealTop = scrollRevealEle[i].getBoundingClientRect().top;
+    let revealPoint = 150;
+    // console.log(revealTop, windowHeight - revealPoint);
+    if(revealTop < windowHeight - revealPoint){
+    
+      scrollRevealEle[i].classList.add("scroll-active");
+    } else {
+      scrollRevealEle[i].classList.remove("scroll-active");
+    }
+  }
+});

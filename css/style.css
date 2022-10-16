@@ -21,3 +21,13 @@ h1, h2, h3, h4, h5, h6 {
 ul li{
   list-style-type: none;
 }
+
+.scroll-reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.scroll-active{
+  transform: translateY(0);
+  opacity: 1;
+}
